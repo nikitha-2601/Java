@@ -1,0 +1,22 @@
+
+class MessagePrinter implements Runnable {
+  private String message;
+  private int times;
+
+  public MessagePrinter(String message, int times) {
+    this.message = message;
+    this.times = times;
+  }
+
+  @Override
+  public void run() {
+    for (int i = 0; i < times; i++) {
+      System.out.println(message + " (count: " + (i + 1) + ")");
+      try {
+        Thread.sleep(500); // Pause for half a second for better observation
+      } catch (InterruptedException e) {
+        System.out.println("Thread interrupted");
+      }
+    }
+  }
+}
