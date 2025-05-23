@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+  public static int fibonacci(int n) {
+    if (n == 0) {
+      return 0; // base case
+    } else if (n == 1) {
+      return 1; // base case
+    } else {
+      return fibonacci(n - 1) + fibonacci(n - 2); // recursive case
+    }
+  }
+
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
+    // Prompt the user for a positive integer n
+    System.out.print("Enter a positive integer n: ");
+    int n = scanner.nextInt();
+
+    if (n < 0) {
+      System.out.println("Please enter a positive integer.");
+    } else {
+      int result = fibonacci(n);
+      System.out.println("Fibonacci number at position " + n + " is: " + result);
+    }
+
+    scanner.close();
+  }
+}
