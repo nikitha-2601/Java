@@ -1,0 +1,21 @@
+public class Main {
+  public static void main(String[] args) {
+    printType(123);
+    printType("Hello");
+    printType(45.67);
+    printType(true);
+    printType(null);
+  }
+ public static void printType(Object obj) {
+    String result = switch (obj) {
+      case Integer i -> "It's an Integer with value: " + i;
+      case String s -> "It's a String: " + s;
+      case Double d -> "It's a Double: " + d;
+      case Boolean b -> "It's a Boolean: " + b;
+      case null -> "It's null";
+      default -> "Unknown type: " + obj.getClass().getSimpleName();
+    };
+
+    System.out.println(result);
+  }
+}
