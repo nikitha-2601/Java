@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
+    
+    System.out.print("Enter a string: ");
+    String input = scanner.nextLine();
+
+    // Method 1: Using a loop
+    String reversedLoop = "";
+    for (int i = input.length() - 1; i >= 0; i--) {
+      reversedLoop += input.charAt(i);
+    }
+
+    
+    String reversedSB = new StringBuilder(input).reverse().toString();
+
+  
+    System.out.println("Reversed string (using loop): " + reversedLoop);
+    System.out.println("Reversed string (using StringBuilder): " + reversedSB);
+
+    scanner.close();
+  }
+}
