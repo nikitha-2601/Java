@@ -1,0 +1,16 @@
+public class Main {
+  public static void main(String[] args) {
+    int myInt = 42;
+    float myFloat = 3.14f;
+    double myDouble = 2.718281828;
+    char myChar = 'A';
+    boolean myBoolean = true;
+
+    
+    System.out.println("Integer value (int): " + myInt);
+    System.out.println("Floating-point value (float): " + myFloat);
+    System.out.println("Double precision value (double): " + myDouble);
+    System.out.println("Character value (char): " + myChar);
+    System.out.println("Boolean value (boolean): " + myBoolean);
+  }
+}
